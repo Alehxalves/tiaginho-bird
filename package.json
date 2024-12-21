@@ -1,13 +1,13 @@
 {
   "name": "tiaginho-bird",
   "version": "0.1.0",
-  "description": "Clumsy Bird - A MelonJS port of the famous Flappy Bird game",
+  "description": "tiaginho Bird - A MelonJS port of the famous Flappy Bird game",
   "engines": {
     "node": ">= 0.8.0"
   },
   "scripts": {
     "start": "npx serve .",
-    "build": "grunt build"
+    "build": "grunt default"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
