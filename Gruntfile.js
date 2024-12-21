@@ -10,7 +10,20 @@ module.exports = function (grunt) {
   ];
 
   // Project configuration.
+  grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.initConfig({
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: "build/", // O diretório onde o Grunt gera os arquivos
+            src: ["clumsy-min.js"], // Arquivo gerado
+            dest: "public/", // Diretório de saída esperado pela Vercel
+          },
+        ],
+      },
+    },
     uglify: {
       options: {
         report: "min",
@@ -62,7 +75,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-connect");
 
   // Default task.
-  grunt.registerTask("default", ["uglify"]);
+  grunt.registerTask("default", ["uglify", "copy"]);
   grunt.registerTask("lint", [
     "jshint:beforeConcat",
     "concat",
