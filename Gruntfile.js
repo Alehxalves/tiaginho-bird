@@ -18,7 +18,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          "build/clumsy-min.js": [sourceFiles],
+          "public/clumsy-min.js": [sourceFiles], // Mudado para 'public'
         },
       },
     },
